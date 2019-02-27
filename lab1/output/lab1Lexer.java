@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/uml/Dokumenty/225981/lab1/lab1.g 2019-02-27 15:56:55
+// $ANTLR 3.5.1 /home/uml/Dokumenty/225981/lab1/lab1.g 2019-02-27 16:41:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
