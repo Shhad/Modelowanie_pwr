@@ -1,0 +1,41 @@
+group pierwszy;
+
+int(i) ::= <<
+PUSH#<i>
+
+>>
+zapisz(i) ::="POP[<i>]"
+dodaj(p1, p2) ::= <<
+  <p1>
+  <p2>
+  ADD
+>>
+
+odejmij(p1, p2) ::= <<
+  <p1>
+  <p2>
+  SUB
+>>
+
+pomnoz(p1, p2) ::= <<
+  <p1>
+  <p2>
+  MUL
+>>
+
+podziel(p1, p2) ::= <<
+  <p1>
+  <p2>
+  DIV
+>>
+podst(p1, p2) ::= <<
+  <p2>
+  <zapisz(p1)>
+>>
+dek(n) ::= <<
+DD <n>
+>>
+while(p1, p2) ::=<<
+
+>>
+

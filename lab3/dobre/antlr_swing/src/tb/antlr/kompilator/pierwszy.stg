@@ -1,0 +1,80 @@
+group pierwszy;
+
+int(i) ::= <<
+  PUSH #<i>
+>>
+
+dodaj(p1, p2) ::= <<
+  <p1>
+  <p2>
+  ADD
+>>
+
+odejmij(p1, p2) ::= <<
+  <p1>
+  <p2>
+  SUB
+>>
+
+pomnoz(p1, p2) ::= <<
+  <p1>
+  <p2>
+  MUL
+>>
+
+initializeVar(i1, e2) ::= <<
+  declareVar<i1>
+  <e2>
+  writeVar<i1>
+>>
+
+declareVar(i) ::= "DD <i>"
+readNum(i) ::= "PUSH #<i>"
+readVar(i) ::= "PUSH [<i>]"
+writeVar(i) ::= "POP [<i>]"
+
+podziel(p1, p2) ::= <<
+  <p1>
+  <p2>
+  DIV
+>>
+
+winksze(e1, e2, e3) ::= <<
+  <e1>
+  <e2>
+  SUB
+  <e3>
+  JG
+>>
+
+winkszeRowne(e1, e2, e3) ::= <<
+  <e1>
+  <e2>
+  SUB
+  <e3>
+  JGE
+>>
+
+mnijsze(e1, e2, e3) ::= <<
+  <e1>
+  <e2>
+  SUB
+  <e3>
+  JL
+>>
+
+mnijszeRowne(e1, e2, e3) ::= <<
+  <e1>
+  <e2>
+  SUB
+  <e3>
+  JLE
+>>
+
+rowne(e1, e2, e3) ::= <<
+  <e1>
+  <e2>
+  SUB
+  <e3>
+  JE
+>>
