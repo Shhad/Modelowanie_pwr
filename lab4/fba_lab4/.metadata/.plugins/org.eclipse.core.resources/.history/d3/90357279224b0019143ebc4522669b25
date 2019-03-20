@@ -1,0 +1,8 @@
+   public class Locality {
+     private Integer Inhabitants;
+ 
+     public Integer getInhabitants() {
+       return this.Inhabitants;
+     }
+ 
+   }

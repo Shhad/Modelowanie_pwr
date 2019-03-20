@@ -1,0 +1,14 @@
+   public class Switch {
+     private DecisionNode base_DecisionNode;
+
+     private String expr;
+ 
+     public DecisionNode getBase_DecisionNode() {
+       return this.base_DecisionNode;
+     }
+
+     public String getExpr() {
+       return this.expr;
+     }
+ 
+   }

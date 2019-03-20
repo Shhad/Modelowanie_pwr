@@ -1,0 +1,8 @@
+   public class Bean {
+     private Class base_Class;
+ 
+     public Class getBase_Class() {
+       return this.base_Class;
+     }
+ 
+   }
