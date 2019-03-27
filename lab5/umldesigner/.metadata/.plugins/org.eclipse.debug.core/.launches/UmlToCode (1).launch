@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
+<stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Java Application"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/test_UML_Obeo_19_en/model.uml"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/test_UML_Obeo_19_en/src-gen"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/testAcceleo_2019/src/test2Acceleo/main/UmlToCode.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="test2Acceleo.main.UmlToCode"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;/home/uml/Pulpit/225981/Modelowanie_pwr/lab5/umldesigner/test_UML_Obeo_19_en/model.uml&quot; &quot;/home/uml/Pulpit/225981/Modelowanie_pwr/lab5/umldesigner/test_UML_Obeo_19_en/src-gen&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="testAcceleo_2019"/>
+</launchConfiguration>

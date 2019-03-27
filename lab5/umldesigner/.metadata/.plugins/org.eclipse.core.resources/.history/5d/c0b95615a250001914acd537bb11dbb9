@@ -1,0 +1,15 @@
+package TestTransAccel;
+
+ class Switch 
+ {
+// Atrybuty:
+	public DecisionNode  base_DecisionNode;
+	public String org.eclipse.uml2.uml.internal.impl.LiteralUnlimitedNaturalImpl@70dd7e15 (name: <unset>, visibility: <unset>) (value: 1) expr;
+// Getters & Setters:
+	DecisionNode	getbase_DecisionNode() { return base_DecisionNode; }
+	void	setbase_DecisionNode(DecisionNode w) { base_DecisionNode = w; }
+	String	getexpr() { return expr; }
+	void	setexpr(String w) { expr = w; }
+// Operacje:	
+	
+};

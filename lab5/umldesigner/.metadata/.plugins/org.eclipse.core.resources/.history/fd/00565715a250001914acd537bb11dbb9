@@ -1,0 +1,25 @@
+package urbanizacja;
+
+ abstract  class Street 
+ {
+// Atrybuty:
+	private int org.eclipse.uml2.uml.internal.impl.LiteralUnlimitedNaturalImpl@2a3591c5 (name: , visibility: <unset>) (value: 5) Numbers;
+	private String  Name;
+// Getters & Setters:
+	int	getNumbers() { return Numbers; }
+	void	setNumbers(int w) { Numbers = w; }
+	String	getName() { return Name; }
+	void	setName(String w) { Name = w; }
+// Operacje:	
+boolean
+	 isNumber() {
+			return !Numbers.empty();
+		
+	}	
+ void 
+	 crossing() {
+			Name = "skrzyżowanie"
+		
+	}	
+	
+};

@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="sekwencje" nsURI="test2Acceleo::common::sekwencje" startHeaderPosition="29" endHeaderPosition="335">
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="putBehavior" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Bag(String)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Bag(Message)">
+          <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Bag(MessageOccurrenceSpecification)">
+            <source xsi:type="ocl.ecore:OperationCallExp" eType="/3/Bag(MessageOccurrenceSpecification)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+              <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Bag(InteractionFragment)">
+                <source xsi:type="mtl:QueryInvocation" eType="/3/Set(Lifeline)" definition="/0/getActors">
+                  <argument xsi:type="ocl.ecore:VariableExp" name="it" referredVariable="/0/putBehavior/it">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+                  </argument>
+                </source>
+                <body xsi:type="ocl.ecore:PropertyCallExp" eType="/3/Set(InteractionFragment)">
+                  <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/putBehavior/collect/collect/collect/%/collect/temp1">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline/coveredBy"/>
+                </body>
+                <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+                </iterator>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/7/MessageOccurrenceSpecification">
+                <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+              </argument>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="temp2" referredVariable="/0/putBehavior/collect/collect/collect/temp2">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/7/MessageOccurrenceSpecification">
+                <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="temp2">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+            </iterator>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="temp3" referredVariable="/0/putBehavior/collect/collect/temp3">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageEnd/message"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp3">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+          </iterator>
+        </source>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="temp4" referredVariable="/0/putBehavior/collect/temp4">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/5.0.0/UML#//NamedElement/getLabel"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp4">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+        </iterator>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="();&#xA;&#x9;"/>
+      <body xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(OclAny)" referredOperation="/1/oclstdlib_Collection(T)_Class/sep">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Bag(String)">
+          <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/Set(Message)">
+            <source xsi:type="ocl.ecore:VariableExp" name="it" referredVariable="/0/putBehavior/it">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction/message"/>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/putBehavior/%.2/collect/temp5">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/5.0.0/UML#//NamedElement/name"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp5">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </iterator>
+        </source>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Bag(MessageSort)">
+        <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/Set(Message)">
+          <source xsi:type="ocl.ecore:VariableExp" name="it" referredVariable="/0/putBehavior/it">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction/message"/>
+        </source>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageSort"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/putBehavior/collect.1/temp6">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message/messageSort"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp6">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+        </iterator>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(GeneralOrdering)">
+        <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(InteractionFragment)">
+          <source xsi:type="ocl.ecore:VariableExp" name="it" referredVariable="/0/putBehavior/it">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction/fragment"/>
+        </source>
+        <body xsi:type="ocl.ecore:PropertyCallExp" eType="/3/Set(GeneralOrdering)">
+          <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/putBehavior/collect.2/temp7">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//InteractionFragment"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//InteractionFragment/generalOrdering"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp7">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//InteractionFragment"/>
+        </iterator>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="ll" referredVariable="/0/putBehavior/%.6/ll">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/5.0.0/UML#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;&lt;"/>
+        <body xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(String)">
+          <source xsi:type="ocl.ecore:VariableExp" name="ll" referredVariable="/0/putBehavior/%.6/ll">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/5.0.0/UML#//Element/getKeywords"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">>&#xA;"/>
+        <loopVariable name="ll">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/3/Set(Lifeline)">
+          <source xsi:type="ocl.ecore:VariableExp" name="it" referredVariable="/0/putBehavior/it">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction/lifeline"/>
+        </iterSet>
+      </body>
+      <parameter name="it">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getActors" visibility="Public" type="/3/Set(Lifeline)">
+      <parameter name="it">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/Set(Lifeline)">
+        <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/Set(Lifeline)">
+          <source xsi:type="ocl.ecore:VariableExp" name="it" referredVariable="/0/getActors/it">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction/lifeline"/>
+        </source>
+        <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/equalsIgnoreCase">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Type"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ConnectableElement"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="x" referredVariable="/0/getActors/select/x">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline/represents"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//TypedElement/type"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Actor">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="x">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+        </iterator>
+      </expression>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="equalsIgnoreCase">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="putBehavior">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/putBehavior"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="it">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getActors" eType="/3/Set(Lifeline)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getActors"/>
+        <eParameters name="it">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+      <eOperations name="sep">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        <eParameters name="separatorString">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="filter">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:CollectionType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="uml_Interaction_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Lifeline)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(InteractionFragment)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//InteractionFragment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(InteractionFragment)" instanceClassName="org.eclipse.ocl.util.Bag">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//InteractionFragment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(MessageOccurrenceSpecification)" instanceClassName="org.eclipse.ocl.util.Bag">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(Message)" instanceClassName="org.eclipse.ocl.util.Bag">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(String)" instanceClassName="org.eclipse.ocl.util.Bag">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Message)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(MessageSort)" instanceClassName="org.eclipse.ocl.util.Bag">
+      <elementType xsi:type="ecore:EEnum" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageSort"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(InteractionFragment)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//InteractionFragment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(GeneralOrdering)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//GeneralOrdering"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(GeneralOrdering)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//GeneralOrdering"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(String)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="MessageOccurrenceSpecification">
+      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//MessageOccurrenceSpecification"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Interaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/putBehavior">
+      <details key="start" value="149"/>
+      <details key="end" value="523"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/putBehavior/%">
+      <details key="start" value="199"/>
+      <details key="end" value="200"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/putBehavior/collect">
+      <details key="start" value="201"/>
+      <details key="end" value="335"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/putBehavior/collect/collect">
+      <details key="start" value="201"/>
+      <details key="end" value="324"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/putBehavior/collect/collect/collect">
+      <details key="start" value="201"/>
+      <details key="end" value="313"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/putBehavior/collect/collect/collect/%">
+      <details key="start" value="201"/>
+      <details key="end" value="268"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/putBehavior/collect/collect/collect/%/collect">
+      <details key="start" value="201"/>
+      <details key="end" value="225"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/putBehavior/collect/collect/collect/%/collect/%">
+      <details key="start" value="201"/>
+      <details key="end" value="215"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/putBehavior/collect/collect/collect/%/collect/%/it">
+      <details key="start" value="201"/>
+      <details key="end" value="203"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/putBehavior/collect/collect/collect/%/collect/%.1">
+      <details key="start" value="216"/>
+      <details key="end" value="225"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/putBehavior/collect/collect/collect/%/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/putBehavior/collect/collect/collect/%/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/putBehavior/collect/collect/collect/%/%">
+      <details key="start" value="237"/>
+      <details key="end" value="267"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/putBehavior/collect/collect/collect/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/putBehavior/collect/collect/collect/%.1/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/putBehavior/collect/collect/collect/%.1/%">
+      <details key="start" value="282"/>
+      <details key="end" value="312"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/putBehavior/collect/collect/collect/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/putBehavior/collect/collect/%">
+      <details key="start" value="317"/>
+      <details key="end" value="324"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/putBehavior/collect/collect/%/temp3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/putBehavior/collect/collect/temp3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/putBehavior/collect/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/putBehavior/collect/%/temp4">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/putBehavior/collect/temp4">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/putBehavior/%.1">
+      <details key="start" value="337"/>
+      <details key="end" value="342"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/putBehavior/%.2">
+      <details key="start" value="343"/>
+      <details key="end" value="368"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/putBehavior/%.2/collect">
+      <details key="start" value="343"/>
+      <details key="end" value="358"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/putBehavior/%.2/collect/%">
+      <details key="start" value="343"/>
+      <details key="end" value="353"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/putBehavior/%.2/collect/%/it">
+      <details key="start" value="343"/>
+      <details key="end" value="345"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/putBehavior/%.2/collect/%.1">
+      <details key="start" value="354"/>
+      <details key="end" value="358"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/putBehavior/%.2/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/putBehavior/%.2/collect/temp5">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/putBehavior/%.2/%">
+      <details key="start" value="364"/>
+      <details key="end" value="367"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/putBehavior/%.3">
+      <details key="start" value="370"/>
+      <details key="end" value="372"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/putBehavior/collect.1">
+      <details key="start" value="373"/>
+      <details key="end" value="395"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/putBehavior/collect.1/%">
+      <details key="start" value="373"/>
+      <details key="end" value="383"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/putBehavior/collect.1/%/it">
+      <details key="start" value="373"/>
+      <details key="end" value="375"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/putBehavior/collect.1/%.1">
+      <details key="start" value="384"/>
+      <details key="end" value="395"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/putBehavior/collect.1/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/putBehavior/collect.1/temp6">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/putBehavior/%.4">
+      <details key="start" value="397"/>
+      <details key="end" value="399"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/putBehavior/collect.2">
+      <details key="start" value="400"/>
+      <details key="end" value="427"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/putBehavior/collect.2/%">
+      <details key="start" value="400"/>
+      <details key="end" value="411"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/putBehavior/collect.2/%/it">
+      <details key="start" value="400"/>
+      <details key="end" value="402"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/putBehavior/collect.2/%.1">
+      <details key="start" value="412"/>
+      <details key="end" value="427"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/putBehavior/collect.2/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/putBehavior/collect.2/temp7">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/putBehavior/%.5">
+      <details key="start" value="429"/>
+      <details key="end" value="430"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/putBehavior/%.6">
+      <details key="start" value="431"/>
+      <details key="end" value="511"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/putBehavior/%.6/%">
+      <details key="start" value="467"/>
+      <details key="end" value="469"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/putBehavior/%.6/%.1">
+      <details key="start" value="470"/>
+      <details key="end" value="477"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/putBehavior/%.6/%.1/ll">
+      <details key="start" value="470"/>
+      <details key="end" value="472"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/putBehavior/%.6/%.2">
+      <details key="start" value="479"/>
+      <details key="end" value="482"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/putBehavior/%.6/%.3">
+      <details key="start" value="483"/>
+      <details key="end" value="499"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/putBehavior/%.6/%.3/ll">
+      <details key="start" value="483"/>
+      <details key="end" value="485"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/putBehavior/%.6/%.4">
+      <details key="start" value="501"/>
+      <details key="end" value="504"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/putBehavior/%.6/ll">
+      <details key="start" value="437"/>
+      <details key="end" value="450"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/putBehavior/%.6/%.5">
+      <details key="start" value="453"/>
+      <details key="end" value="464"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/putBehavior/%.6/%.5/it">
+      <details key="start" value="453"/>
+      <details key="end" value="455"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/putBehavior/it">
+      <details key="start" value="179"/>
+      <details key="end" value="195"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/getActors">
+      <details key="start" value="525"/>
+      <details key="end" value="680"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/getActors/it">
+      <details key="start" value="550"/>
+      <details key="end" value="566"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/getActors/select">
+      <details key="start" value="587"/>
+      <details key="end" value="678"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/getActors/select/%">
+      <details key="start" value="587"/>
+      <details key="end" value="598"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/getActors/select/%/it">
+      <details key="start" value="587"/>
+      <details key="end" value="589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/getActors/select/%.1">
+      <details key="start" value="620"/>
+      <details key="end" value="677"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/getActors/select/%.1/%">
+      <details key="start" value="620"/>
+      <details key="end" value="651"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/getActors/select/%.1/%/%">
+      <details key="start" value="620"/>
+      <details key="end" value="646"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/getActors/select/%.1/%/%/%">
+      <details key="start" value="620"/>
+      <details key="end" value="637"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/getActors/select/%.1/%/%/%/%">
+      <details key="start" value="620"/>
+      <details key="end" value="632"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/getActors/select/%.1/%/%/%/%/x">
+      <details key="start" value="620"/>
+      <details key="end" value="621"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/getActors/select/%.1/%.1">
+      <details key="start" value="669"/>
+      <details key="end" value="676"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/getActors/select/x">
+      <details key="start" value="609"/>
+      <details key="end" value="619"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

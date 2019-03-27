@@ -1,0 +1,48 @@
+[comment encoding = UTF-8 /]
+[module klasy('http://www.eclipse.org/uml2/5.0.0/UML', 'http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard')]
+
+[import test2Acceleo::common::sekwencje /]
+[import test2Acceleo::common::aktywnosci/]
+
+[template public generateElement(c : Class)]
+[file (c.classFileName(), false, 'UTF-8')]
+package [c.containingPackages().name->sep('.')/];
+
+[c.visibility/] [if (c.isAbstract)] abstract [/if] class [c.name/][c.extension()/]
+ {
+// Atrybuty:
+	[for (it : Property | c.ownedAttribute)]
+	[it.visibility/] [it.type.name/] [it.name/][if (it.upper) <> 1][ '[' /][it.upper/][ ']' /][/if];
+	[/for]
+// Getters & Setters:
+	[for (it : Property | c.ownedAttribute)]
+	[it.visibility/] [it.type.name/] get[it.name/]() { return [it.name/]; }
+	void set[it.name/]([it.type.name/] w) { [it.name/] = w; }
+	[/for]
+// Operacje:	
+	[for (op : Operation | c.ownedOperation)]
+	[if (op.type.oclIsUndefined() or op.type.name.oclIsInvalid())] void 
+	[else] [op.type.name/] [/if][op.name/]() {
+		[putBody(op.method)/]
+	}	
+	[/for]
+	
+};
+	[/file]
+[/template]
+[template public extension(aClass: Class)? (not aClass.superClass->isEmpty())]
+	extends [aClass.superClass.name/]
+[/template]
+
+[query public classFileName (aClass : Class) : String = 
+ aClass.qualifiedName().replaceAll('\\.','/').concat('.java')
+ /]
+
+[query public qualifiedName (aClass : Class) : String = 
+ aClass.containingPackages().name->sep('.')->including('.')->including(aClass.name)->toString()
+ /]
+
+[query public containingPackages (aClass : Class) : Sequence(Package) = 
+ aClass.ancestors(Package)->reject(oclIsKindOf(Model))->reverse()
+ /]
+
