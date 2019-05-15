@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// Place global declarations here.</declaration>
+	<template>
+		<name x="5" y="5">Template</name>
+		<parameter>const int[0,9] first,const int[0,9] second,const int[0,9] third</parameter>
+		<declaration>// Place local declarations here.
+int[0,1] first_correct=0;
+int[0,1] second_correct=0;
+int[0,1] third_correct=0;</declaration>
+		<location id="id0" x="-425" y="-408">
+		</location>
+		<location id="id1" x="-510" y="-408">
+		</location>
+		<location id="id2" x="-595" y="-408">
+		</location>
+		<location id="id3" x="-688" y="-408">
+		</location>
+		<init ref="id3"/>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id3"/>
+			<nail x="-671" y="-323"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<nail x="-646" y="-366"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="select" x="-502" y="-476">third_cipher:int[0,9]</label>
+			<label kind="guard" x="-510" y="-459">third == third_cipher</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id1"/>
+			<label kind="select" x="-629" y="-527">second_cipher:int[0,9]</label>
+			<label kind="guard" x="-637" y="-510">second == second_cipher</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id2"/>
+			<label kind="select" x="-714" y="-476">first_cipher:int[0,9]</label>
+			<label kind="guard" x="-714" y="-459">first == first_cipher</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Process = Template(1,5,9);
+// List one or more processes to be composed into a system.
+system Process;
+    </system>
+	<queries>
+	</queries>
+</nta>
