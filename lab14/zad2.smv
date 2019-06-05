@@ -1,0 +1,10 @@
+MODULE wez_sie_za_nauke_a_nie_czyjes_katalogii_przegladasz
+VAR x : 0..9;
+VAR h : array 0..2 of boolean;
+
+TRANS next(x) in case
+	x=1:
+	x=5:
+	x=9:
+	TRUE:
+	esac;

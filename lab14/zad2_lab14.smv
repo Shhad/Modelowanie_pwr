@@ -1,0 +1,20 @@
+MODULE main
+VAR cyfra : 0..9;
+VAR bramka: {zamknieta,pierwszaBramka,drugaBramka,otwarta};
+
+INIT bramka = zamknieta;
+
+TRANS next(bramka) in case
+	cyfra=1:pierwszaBramka;
+	cyfra=5 & bramka=pierwszaBramka:drugaBramka;
+	cyfra=9 & bramka=drugaBramka:otwarta;
+	TRUE:zamknieta;
+	esac;
+
+
+CTLSPEC AG((cyfra=0 | cyfra>1 ) & bramka=zamknieta -> bramka=zamknieta)
+CTLSPEC AG(cyfra=1 & bramka=zamknieta -> AX bramka=pierwszaBramka)
+CTLSPEC AG(cyfra=5 & bramka=pierwszaBramka -> AX bramka=drugaBramka)
+CTLSPEC AG(cyfra=9 & bramka=drugaBramka -> AX bramka=otwarta)
+CTLSPEC AG(EF(bramka=otwarta));
+
